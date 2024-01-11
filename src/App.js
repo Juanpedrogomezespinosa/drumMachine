@@ -4,23 +4,23 @@ import Drum from "./components/Drum";
 function App() {
   const [sounds] = useState([
     {
-      name: "Snare3",
-      sound: require("./sounds/snare3.wav"),
+      name: "Crash",
+      sound: require("./sounds/crash.wav"),
       key: "Q",
     },
     {
-      name: "oHat",
-      sound: require("./sounds/oHat.wav"),
+      name: "woo",
+      sound: require("./sounds/woo.wav"),
       key: "W",
     },
     {
-      name: "Conga",
-      sound: require("./sounds/conga.wav"),
+      name: "Rollout",
+      sound: require("./sounds/rollout.wav"),
       key: "E",
     },
     {
-      name: "Snare",
-      sound: require("./sounds/snare.wav"),
+      name: "Kick808",
+      sound: require("./sounds/kick808.wav"),
       key: "A",
     },
     {
@@ -29,24 +29,24 @@ function App() {
       key: "S",
     },
     {
-      name: "Clap2",
-      sound: require("./sounds/clap2.wav"),
+      name: "hithat",
+      sound: require("./sounds/hithat.wav"),
       key: "D",
     },
 
     {
-      name: "kick",
+      name: "Kick",
       sound: require("./sounds/kick.wav"),
       key: "Z",
     },
     {
-      name: "Hat",
-      sound: require("./sounds/hat.wav"),
+      name: "Snare",
+      sound: require("./sounds/Snare.wav"),
       key: "X",
     },
     {
-      name: "Clap",
-      sound: require("./sounds/clap.wav"),
+      name: "hat",
+      sound: require("./sounds/hat.wav"),
       key: "C",
     },
   ]);

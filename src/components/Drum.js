@@ -1,9 +1,10 @@
-// Drum.js
 import React, { useEffect, useCallback } from "react";
 
 function Drum(props) {
   const play = useCallback(() => {
-    new Audio(props.sound).play();
+    const audio = new Audio(props.sound);
+    audio.currentTime = 0; // Reinicia la reproducción al principio
+    audio.play();
   }, [props.sound]);
 
   useEffect(() => {
