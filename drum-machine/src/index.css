@@ -1,7 +1,16 @@
+/* index.css */
+
 * {
   margin: 0;
   box-sizing: border-box;
   font-family: "Fira Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #b1a7a6;
+  background: radial-gradient(circle at 50% 200px, #161a1d, transparent);
 }
 
 .App {
@@ -10,31 +19,72 @@
   padding-top: 128px;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 h1 {
+  color: #ffffff;
   font-size: 3rem;
   margin-bottom: 2rem;
 }
 
-.drums {
+.container {
+  background-color: #161a1d;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 667px; /* Tamaño mínimo en altura */
+  min-width: 375px; /* Tamaño mínimo en ancho */
+  height: 680px; /* Ocupa toda la altura de la ventana */
+  width: 350px; /* Ocupa todo el ancho de la ventana */
+  padding: 2rem;
+  position: fixed; /* Fija el contenedor para que ocupe toda la pantalla */
+
+  top: 0;
+  left: 0;
+}
+
+@media (min-width: 376px) {
+  .container {
+    position: static; /* Si el tamaño de la ventana es mayor que el de un iPhone SE, el contenedor no está fijo */
+    width: auto; /* Ancho automático para el tamaño de la pantalla */
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    position: static; /* Si el tamaño de la ventana es mayor que el de un iPhone SE, el contenedor no está fijo */
+    width: auto; /* Ancho automático para el tamaño de la pantalla */
+    border-radius: 1rem;
+  }
+}
+
+.drums {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 600px;
+  margin-top: 2rem;
 }
 
 .drum {
-  background-color: crimson;
+  background-color: #e5383b;
   border-radius: 1rem;
-  width: 100px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s;
+}
+
+.drum:hover {
+  background-color: #a30000;
 }
 
 .drum .key {
   color: #fff;
-  font-size: 3rem;
+  font-size: 2rem;
 }

@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+// Drum.js
+import React, { useEffect, useCallback } from "react";
 
 function Drum(props) {
-  const play = () => {
+  const play = useCallback(() => {
     new Audio(props.sound).play();
-  };
+  }, [props.sound]);
 
   useEffect(() => {
     const handleKeyDown = (event) => {

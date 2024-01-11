@@ -1,22 +1,22 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Drum from "./components/Drum";
 
 function App() {
   const [sounds] = useState([
     {
-      name: "kick",
-      sound: require("./sounds/kick.wav"),
-      key: "Z",
+      name: "Snare3",
+      sound: require("./sounds/snare3.wav"),
+      key: "Q",
     },
     {
-      name: "Hat",
-      sound: require("./sounds/hat.wav"),
-      key: "X",
+      name: "oHat",
+      sound: require("./sounds/oHat.wav"),
+      key: "W",
     },
     {
-      name: "Clap",
-      sound: require("./sounds/clap.wav"),
-      key: "C",
+      name: "Conga",
+      sound: require("./sounds/conga.wav"),
+      key: "E",
     },
     {
       name: "Snare",
@@ -33,30 +33,33 @@ function App() {
       sound: require("./sounds/clap2.wav"),
       key: "D",
     },
+
     {
-      name: "Snare3",
-      sound: require("./sounds/snare3.wav"),
-      key: "Q",
+      name: "kick",
+      sound: require("./sounds/kick.wav"),
+      key: "Z",
     },
     {
-      name: "oHat",
-      sound: require("./sounds/oHat.wav"),
-      key: "W",
+      name: "Hat",
+      sound: require("./sounds/hat.wav"),
+      key: "X",
     },
     {
-      name: "Conga",
-      sound: require("./sounds/conga.wav"),
-      key: "E",
+      name: "Clap",
+      sound: require("./sounds/clap.wav"),
+      key: "C",
     },
   ]);
 
   return (
     <div className="App">
-      <h1>React drumkit</h1>
-      <div className="drums">
-        {sounds.map((sound) => (
-          <Drum letter={sound.key} sound={sound.sound} />
-        ))}
+      <div className="container">
+        <h1>Drumkit</h1>
+        <div className="drums">
+          {sounds.map((sound, index) => (
+            <Drum key={index} letter={sound.key} sound={sound.sound} />
+          ))}
+        </div>
       </div>
     </div>
   );
